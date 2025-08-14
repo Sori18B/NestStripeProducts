@@ -5,9 +5,10 @@ import { AuthModule } from './middlewares/auth/auth.module';
 import { FormModule } from './apps/form/form.module';
 import { StripeModule } from './utils/stripe/stripe.module';
 import { CheckoutModule } from './utils/checkout/checkout.module';
+import { WebhookModule } from './utils/webhook/webhook.module';
 
 @Module({
-  imports: [LoginModule, RegisterModule, AuthModule, FormModule, StripeModule, CheckoutModule],
+  imports: [LoginModule, RegisterModule, AuthModule, FormModule, StripeModule, CheckoutModule, WebhookModule],
   controllers: [],
   providers: [],
 })

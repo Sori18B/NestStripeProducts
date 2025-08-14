@@ -8,6 +8,12 @@ export class LoginController {
 
   @Post()
   async verifyLogin(@Body() loginDto: LoginDto) {
+    /* Controller to verify a login
+    {
+    "email": "david@gmail.com",
+    "password" : "david123"
+    }
+    */
     return await this.loginService.verifyLogin(loginDto);
   }
 }
