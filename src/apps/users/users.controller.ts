@@ -8,6 +8,13 @@ export class UserController {
 
   @Post()
   async createUser(@Body() registeruserDto: UserDto) {
+    /* Controller to create a user
+    {
+  "name" : "David",
+  "email": "david@gmail.com",
+  "password" : "david123"
+  }
+    */
     return await this.registerService.createUser(registeruserDto)
   }
 

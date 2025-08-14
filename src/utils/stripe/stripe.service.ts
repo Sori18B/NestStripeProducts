@@ -15,7 +15,7 @@ export class StripeService {
     const stripeKey = this.configService.get<string>('STRIPE_API_KEY');
 
     if (!stripeKey) {
-      throw new Error('No se encontró la apikey en .env');
+      throw new Error('No se encontró la apikey');
     }
     this.stripe = new Stripe(stripeKey);
   } //constructor
